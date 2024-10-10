@@ -22,6 +22,10 @@ def create_app():
         return Usuario.query.get(int(user_id))
 
     from app.routes.auth import auth_bp
+    from app.routes.motos_routes import bp as motos_bp
+
     app.register_blueprint(auth_bp)
+    app.register_blueprint(motos_bp)
+
 
     return app 

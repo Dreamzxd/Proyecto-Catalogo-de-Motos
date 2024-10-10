@@ -1,186 +1,208 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        
-.header {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-.header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
+        .header {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-figure{
-    text-align:center;
-}
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
 
-img{
-    width: 550px;
-}
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
 
-h2 {
-    text-align: center;
-}
-nav {
-    background-color: #000000;
-    overflow: hidden;
-    padding: 10px 0;
-}
+        figure {
+            text-align: center;
+        }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
+        img {
+            width: 550px;
+        }
 
-nav ul li {
-    margin:  0 10px;
-}
+        h2 {
+            text-align: center;
+        }
 
-nav ul li a {
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    display: block;
-    background-color: #0073e6;
-    border-radius: 20px;
-    transition: background-color 0.3s, color 0.3s;
-}
+        nav {
+            background-color: #000000;
+            overflow: hidden;
+            padding: 10px 0;
+        }
 
-nav ul li a:hover,
-nav ul li a:focus {
-    background-color: #005bb5;
-    color: #fff;
-}
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
 
-.seccion {
-    padding: 20px;
-    margin: 20px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
-    display: none; /* Ocultar todas las secciones por defecto */
-}
+        nav ul li {
+            margin: 0 10px;
+        }
 
-.seccion.activa {
-    display: block; /* Mostrar solo la sección activa */
-}
+        nav ul li a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            background-color: #0073e6;
+            border-radius: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #000000;
-    color: white;
-    margin-top: 20px;
-}
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-.moto-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-}
-.moto-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-}
-.moto-card img {
-    max-width: 100%;
-    height: auto;
-}
-.btn-inspeccionar {
-    display: inline-block;
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-.btn-inspeccionar {
-    transition: transform 0.3s ease;
-    display: block;
-    width: 80%;
-    margin: 10px auto;
-    text-align: center;
-}
-.btn-inspeccionar:hover {
-    transform: scale(1.1);
-}
-.moto-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-.moto-caracteristicas {
-    margin-top: 10px;
-    font-size: 0.9em;
-    text-align: left;
-}
-.moto-images {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-}
-.moto-images img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-.moto-images img.active {
-    opacity: 1;
-}
-body {
-    font-family: 'Roboto', sans-serif;
-}
-h2, h3 {
-    font-weight: 400;
-}
-.moto-caracteristicas p {
-    font-weight: 300;
-}
-.btn-inspeccionar {
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background-color: #005bb5;
+            color: #fff;
+        }
 
+        .seccion {
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            display: none;
+            /* Ocultar todas las secciones por defecto */
+        }
 
+        .seccion.activa {
+            display: block;
+            /* Mostrar solo la sección activa */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #000000;
+            color: white;
+            margin-top: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .moto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .moto-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .moto-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .btn-inspeccionar {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .btn-inspeccionar {
+            transition: transform 0.3s ease;
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        .btn-inspeccionar:hover {
+            transform: scale(1.1);
+        }
+
+        .moto-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .moto-caracteristicas {
+            margin-top: 10px;
+            font-size: 0.9em;
+            text-align: left;
+        }
+
+        .moto-images {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .moto-images img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .moto-images img.active {
+            opacity: 1;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h2,
+        h3 {
+            font-weight: 400;
+        }
+
+        .moto-caracteristicas p {
+            font-weight: 300;
+        }
+
+        .btn-inspeccionar {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
     </style>
 </head>
+
 <body>
     <div class="header">
         <h1>infomotos</h1>
@@ -215,7 +237,7 @@ h2, h3 {
                     <p>Potencia: 48 HP</p>
                     <p>Peso: 103 kg</p>
                 </div>
-                <a href="inspeccionar/yz250.html" class="btn-inspeccionar">Inspeccionar</a>
+                <a href="{{ url_for('motos.yz_250_view') }}" class="btn-inspeccionar">Inspeccionar</a>
             </div>
             <div class="moto-card">
                 <div class="moto-images">
@@ -257,8 +279,9 @@ h2, h3 {
                     <p>Potencia: 11 HP</p>
                     <p>Peso: 103 kg</p>
                 </div>
-                <a href="inspeccionar/rx115.html" class="btn-inspeccionar">Inspeccionar</a>
+                <a href="{{ url_for('motos.rx_115_view') }}" class="btn-inspeccionar">Inspeccionar</a>
             </div>
+            
             <div class="moto-card">
                 <div class="moto-images">
                     <img src="../../static/img/DT125.png" alt="DT 125" class="active">
@@ -285,7 +308,7 @@ h2, h3 {
                     <p>Potencia: 10.2 HP</p>
                     <p>Peso: 118 kg</p>
                 </div>
-                <a href="inspeccionar/xtz125.html" class="btn-inspeccionar">Inspeccionar</a>
+                <a href="{{ url_for('motos.rx_115_view') }}" class="btn-inspeccionar">Inspeccionar RX 115</a>
             </div>
             <div class="moto-card">
                 <div class="moto-images">
@@ -340,4 +363,3 @@ h2, h3 {
         window.onload = setupImageRotation;
     </script>
 </body>
-
