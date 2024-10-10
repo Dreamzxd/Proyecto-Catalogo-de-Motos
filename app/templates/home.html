@@ -4,13 +4,340 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        
+.header {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+figure{
+    text-align:center;
+}
+
+img{
+    width: 550px;
+}
+
+h2 {
+    text-align: center;
+}
+nav {
+    background-color: #000000;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin:  0 10px;
+}
+
+nav ul li a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    background-color: #0073e6;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #005bb5;
+    color: #fff;
+}
+
+.seccion {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    display: none; /* Ocultar todas las secciones por defecto */
+}
+
+.seccion.activa {
+    display: block; /* Mostrar solo la sección activa */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    margin-top: 20px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.moto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.moto-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+}
+.moto-card img {
+    max-width: 100%;
+    height: auto;
+}
+.btn-inspeccionar {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.btn-inspeccionar {
+    transition: transform 0.3s ease;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+}
+.btn-inspeccionar:hover {
+    transform: scale(1.1);
+}
+.moto-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.moto-caracteristicas {
+    margin-top: 10px;
+    font-size: 0.9em;
+    text-align: left;
+}
+.moto-images {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.moto-images img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.moto-images img.active {
+    opacity: 1;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+h2, h3 {
+    font-weight: 400;
+}
+.moto-caracteristicas p {
+    font-weight: 300;
+}
+.btn-inspeccionar {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Bienvenido, {{ username }}!</h1>
-        <p>Este es tu dashboard.</p>
-        <a href="{{ url_for('auth.logout') }}" class="btn btn-danger">Cerrar sesión</a>
+    <div class="header">
+        <h1>infomotos</h1>
     </div>
+
+    <div class="container">
+        <h2>Catálogo de Motos</h2>
+        <div class="moto-grid">
+            <div class="moto-card">
+                <div class="moto-images">
+                    <img src="../../static/img/DT 175.png" alt="DT 175" class="active">
+                    <img src="../../static/img/DT 175_2.png" alt="DT 175">
+                    <img src="../../static/img/DT 175_3.png" alt="DT 175">
+                </div>
+                <h3>DT 175</h3>
+                <div class="moto-caracteristicas">
+                    <p>Cilindrada: 175cc</p>
+                    <p>Potencia: 17 HP</p>
+                    <p>Peso: 113 kg</p>
+                </div>
+                <a href="inspeccionar/dt175.html" class="btn-inspeccionar">Inspeccionar</a>
+            </div>
+            <div class="moto-card">
+                <div class="moto-images">
+                    <img src="../../static/img/YZ 250.jpeg" alt="YZ 250" class="active">
+                    <img src="../../static/img/YZ 250_2.jpeg" alt="YZ 250">
+                    <img src="../../static/img/YZ 250_3.jpeg" alt="YZ 250">
+                </div>
+                <h3>YZ 250</h3>
+                <div class="moto-caracteristicas">
+                    <p>Cilindrada: 250cc</p>
+                    <p>Potencia: 48 HP</p>
+                    <p>Peso: 103 kg</p>
+                </div>
+                <a href="inspeccionar/yz250.html" class="btn-inspeccionar">Inspeccionar</a>
+            </div>
+            <div class="moto-card">
+                <div class="moto-images">
+                    <img src="../../static/img/FZ S.png" alt="FZ-S 150" class="active">
+                    <img src="../../static/img/FZ S_2.png" alt="FZ-S 150">
+                    <img src="../../static/img/FZ S_3.png" alt="FZ-S 150">
+                </div>
+                <h3>FZ-S 150</h3>
+                <div class="moto-caracteristicas">
+                    <p>Cilindrada: 149cc</p>
+                    <p>Potencia: 13 HP</p>
+                    <p>Peso: 132 kg</p>
+                </div>
+                <a href="inspeccionar/fzs150.html" class="btn-inspeccionar">Inspeccionar</a>
+            </div>
+            <div class="moto-card">
+                <div class="moto-images">
+                    <img src="../../static/img/XTZ 150.png" alt="XTZ 150" class="active">
+                    <img src="../../static/img/XTZ 150_2.png" alt="XTZ 150">
+                    <img src="../../static/img/XTZ 150_3.png" alt="XTZ 150">
+                </div>
+                <h3>XTZ 150</h3>
+                <div class="moto-caracteristicas">
+                    <p>Cilindrada: 149cc</p>
+                    <p>Potencia: 12.2 HP</p>
+                    <p>Peso: 134 kg</p>
+                </div>
+                <a href="inspeccionar/xtz150.html" class="btn-inspeccionar">Inspeccionar</a>
+            </div>
+            <div class="moto-card">
+                <div class="moto-images">
+                    <img src="../../static/img/rx115.png" alt="RX 115" class="active">
+                    <img src="../../static/img/rx115_2.png" alt="RX 115">
+                    <img src="../../static/img/rx115_3.png" alt="RX 115">
+                </div>
+                <h3>RX 115</h3>
+                <div class="moto-caracteristicas">
+                    <p>Cilindrada: 115cc</p>
+                    <p>Potencia: 11 HP</p>
+                    <p>Peso: 103 kg</p>
+                </div>
+                <a href="inspeccionar/rx115.html" class="btn-inspeccionar">Inspeccionar</a>
+            </div>
+            <div class="moto-card">
+                <div class="moto-images">
+                    <img src="../../static/img/DT125.png" alt="DT 125" class="active">
+                    <img src="../../static/img/DT125_2.png" alt="DT 125">
+                    <img src="../../static/img/DT125_3.png" alt="DT 125">
+                </div>
+                <h3>DT 125</h3>
+                <div class="moto-caracteristicas">
+                    <p>Cilindrada: 123cc</p>
+                    <p>Potencia: 13 HP</p>
+                    <p>Peso: 108 kg</p>
+                </div>
+                <a href="inspeccionar/dt125.html" class="btn-inspeccionar">Inspeccionar</a>
+            </div>
+            <div class="moto-card">
+                <div class="moto-images">
+                    <img src="../../static/img/XTZ 125.png" alt="XTZ 125" class="active">
+                    <img src="../../static/img/XTZ 125_2.png" alt="XTZ 125">
+                    <img src="../../static/img/XTZ 125_3.png" alt="XTZ 125">
+                </div>
+                <h3>XTZ 125</h3>
+                <div class="moto-caracteristicas">
+                    <p>Cilindrada: 124cc</p>
+                    <p>Potencia: 10.2 HP</p>
+                    <p>Peso: 118 kg</p>
+                </div>
+                <a href="inspeccionar/xtz125.html" class="btn-inspeccionar">Inspeccionar</a>
+            </div>
+            <div class="moto-card">
+                <div class="moto-images">
+                    <img src="../../static/img/NS 200.png" alt="NS 200" class="active">
+                    <img src="../../static/img/NS 200_2.png" alt="NS 200">
+                    <img src="../../static/img/NS 200_3.png" alt="NS 200">
+                </div>
+                <h3>NS 200</h3>
+                <div class="moto-caracteristicas">
+                    <p>Cilindrada: 199.5cc</p>
+                    <p>Potencia: 24.5 HP</p>
+                    <p>Peso: 145 kg</p>
+                </div>
+                <a href="inspeccionar/ns200.html" class="btn-inspeccionar">Inspeccionar</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 INFOMOTOS. Todos los derechos reservados.</p>
+        <a href="{{ url_for('auth.logout') }}" class="btn btn-danger">Cerrar sesión</a>
+    </footer>
+
+    <script>
+        // Función para cambiar las imágenes cuando el cursor está encima
+        function setupImageRotation() {
+            const motoCards = document.querySelectorAll('.moto-card');
+            motoCards.forEach(card => {
+                const images = card.querySelectorAll('.moto-images img');
+                let currentIndex = 0;
+                let interval;
+
+                card.addEventListener('mouseenter', () => {
+                    interval = setInterval(() => {
+                        images[currentIndex].classList.remove('active');
+                        currentIndex = (currentIndex + 1) % images.length;
+                        images[currentIndex].classList.add('active');
+                    }, 1000); // Cambia la imagen cada segundo cuando el cursor está encima
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    clearInterval(interval);
+                    images.forEach((img, index) => {
+                        img.classList.toggle('active', index === 0);
+                    });
+                    currentIndex = 0;
+                });
+            });
+        }
+
+        // Ejecuta la función cuando se carga la página
+        window.onload = setupImageRotation;
+    </script>
 </body>
-</html>
+
