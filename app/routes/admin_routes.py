@@ -1,5 +1,7 @@
 from flask import Blueprint,render_template, redirect, url_for, flash
 from app import db
+from flask_wtf import FlaskForm
+from wtforms import StringField, IntegerField, SubmitField
 from app.models.especificaciones import Especificacion
 from app.models.mantenimiento import Mantenimiento
 from app.models.rendimiento import Rendimiento
@@ -8,7 +10,7 @@ bp = Blueprint('vistad', __name__)
 
 @bp.route('/vistad/especif', methods=['GET', 'POST'])
 def agregar_especificacion():
-    form = EspecificacionForm()
+    form = Especificacion()
     if form.validate_on_submit():
         nueva_especificacion = Especificacion(
             marca=form.marca.data,
