@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Rendimiento</title>
+</head>
+<body>
+    <h1>Agregar Rendimiento</h1>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        {{ form.velocidad_maxima.label }} {{ form.velocidad_maxima() }}<br>
+        {{ form.aceleracion.label }} {{ form.aceleracion() }}<br>
+        {{ form.consumo.label }} {{ form.consumo() }}<br>
+        {{ form.autonomia.label }} {{ form.autonomia() }}<br>
+        {{ form.capacidad_todoterreno.label }} {{ form.capacidad_todoterreno() }}<br>
+        {{ form.maniobrabilidad.label }} {{ form.maniobrabilidad() }}<br>
+        {{ form.frenado.label }} {{ form.frenado() }}<br>
+        {{ form.submit() }}
+    </form>
+</body>
+</html>

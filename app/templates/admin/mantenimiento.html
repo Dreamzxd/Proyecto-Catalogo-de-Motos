@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Mantenimiento</title>
+</head>
+<body>
+    <h1>Agregar Mantenimiento</h1>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        {{ form.cambio_aceite.label }} {{ form.cambio_aceite() }}<br>
+        {{ form.filtro_aire.label }} {{ form.filtro_aire() }}<br>
+        {{ form.cadena.label }} {{ form.cadena() }}<br>
+        {{ form.bujia.label }} {{ form.bujia() }}<br>
+        {{ form.carburador.label }} {{ form.carburador() }}<br>
+        {{ form.frenos.label }} {{ form.frenos() }}<br>
+        {{ form.aceite_horquilla.label }} {{ form.aceite_horquilla() }}<br>
+        {{ form.rodamientos.label }} {{ form.rodamientos() }}<br>
+        {{ form.suspension.label }} {{ form.suspension() }}<br>
+        {{ form.piston_aros.label }} {{ form.piston_aros() }}<br>
+        {{ form.sistema_electrico.label }} {{ form.sistema_electrico() }}<br>
+        {{ form.submit() }}
+    </form>
+</body>
+</html>

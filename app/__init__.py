@@ -17,15 +17,13 @@ def create_app():
 
     @login_manager.user_loader
     def load_user(user_id):
-        # since the user_id is just the primary key of our user table, use it in the query for the user
         from .models.user import Usuario
         return Usuario.query.get(int(user_id))
 
-    from app.routes.auth import auth_bp
-    from app.routes.motos_routes import bp as motos_bp
+    from app.routes import auth, motos_routes, admin_routes
 
-    app.register_blueprint(auth_bp)
-    app.register_blueprint(motos_bp)
-
+    app.register_blueprint(auth.auth_bp)
+    app.register_blueprint(motos_routes.bp)
+    app.register_blueprint(admin_routes.bp)
 
     return app 

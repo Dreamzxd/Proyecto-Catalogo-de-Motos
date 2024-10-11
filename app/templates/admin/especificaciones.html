@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Especificación</title>
+</head>
+<body>
+    <h1>Agregar Especificación</h1>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        {{ form.marca.label }} {{ form.marca() }}<br>
+        {{ form.modelo.label }} {{ form.modelo() }}<br>
+        {{ form.año.label }} {{ form.año() }}<br>
+        {{ form.cilindrada.label }} {{ form.cilindrada() }}<br>
+        {{ form.potencia.label }} {{ form.potencia() }}<br>
+        {{ form.peso.label }} {{ form.peso() }}<br>
+        {{ form.tipo_motor.label }} {{ form.tipo_motor() }}<br>
+        {{ form.capacidad_tanque.label }} {{ form.capacidad_tanque() }}<br>
+        {{ form.transmision.label }} {{ form.transmision() }}<br>
+        {{ form.suspension_delantera.label }} {{ form.suspension_delantera() }}<br>
+        {{ form.suspension_trasera.label }} {{ form.suspension_trasera() }}<br>
+        {{ form.freno_delantero.label }} {{ form.freno_delantero() }}<br>
+        {{ form.freno_trasero.label }} {{ form.freno_trasero() }}<br>
+        {{ form.neumatico_delantero.label }} {{ form.neumatico_delantero() }}<br>
+        {{ form.neumatico_trasero.label }} {{ form.neumatico_trasero() }}<br>
+        {{ form.submit() }}
+    </form>
+</body>
+</html>
