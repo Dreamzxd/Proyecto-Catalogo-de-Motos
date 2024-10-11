@@ -10,6 +10,38 @@
         .header {
             background-color: #1a1a1a;
             color: #ffffff;
+            padding: 20px 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logout-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: #c0392b;
+        }
+        .header {
+            background-color: #1a1a1a;
+            color: #ffffff;
             padding: 30px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -200,16 +232,54 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+        .header {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 20px 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title-container {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logout-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: #c0392b;
+        }
     </style>
 </head>
 
 <body>
     <div class="header">
-        <h1>infomotos</h1>
+        <div class="title-container">
+            <img src="{{ url_for('static', filename='img/image.png') }}" alt="Infomotos Logo" style="width: 150px; height: auto; margin-left: 3.5cm;">
+        </div>
+        <a href="{{ url_for('auth.logout') }}" class="logout-btn">Cerrar sesión</a>
     </div>
-
     <div class="container">
-        <h2>Catálogo de Motos</h2>
+        <h2 style="font-size: 2.em;"><b>CATÁLOGO</b></h2>
         <div class="moto-grid">
             <div class="moto-card">
                 <div class="moto-images">
@@ -227,7 +297,7 @@
             </div>
             <div class="moto-card">
                 <div class="moto-images">
-                    <img src="../../static/img/YZ 250.jpeg" alt="YZ 250" class="active">
+                    <img src="../../static/img/YZ 250.png" alt="YZ 250" class="active">
                     <img src="../../static/img/YZ 250_2.jpeg" alt="YZ 250">
                     <img src="../../static/img/YZ 250_3.jpeg" alt="YZ 250">
                 </div>
@@ -237,7 +307,7 @@
                     <p>Potencia: 48 HP</p>
                     <p>Peso: 103 kg</p>
                 </div>
-                <a href="{{ url_for('motos.fz_250_view') }}" class="btn-inspeccionar">Inspeccionar</a>
+                <a href="{{ url_for('motos.yz_250_view') }}" class="btn-inspeccionar">Inspeccionar</a>
             </div>
             <div class="moto-card">
                 <div class="moto-images">
@@ -265,7 +335,7 @@
                     <p>Potencia: 12.2 HP</p>
                     <p>Peso: 134 kg</p>
                 </div>
-                <a href="inspeccionar/xtz150.html" class="btn-inspeccionar">Inspeccionar</a>
+                <a href="{{ url_for('motos.xtz_150_view') }}" class="btn-inspeccionar">Inspeccionar</a>
             </div>
             <div class="moto-card">
                 <div class="moto-images">
@@ -294,7 +364,7 @@
                     <p>Potencia: 13 HP</p>
                     <p>Peso: 108 kg</p>
                 </div>
-                <a href="inspeccionar/dt125.html" class="btn-inspeccionar">Inspeccionar</a>
+                <a href="{{ url_for('motos.dt_125_view') }}" class="btn-inspeccionar">Inspeccionar</a>
             </div>
             <div class="moto-card">
                 <div class="moto-images">
@@ -308,7 +378,7 @@
                     <p>Potencia: 10.2 HP</p>
                     <p>Peso: 118 kg</p>
                 </div>
-                <a href="{{ url_for('motos.rx_115_view') }}" class="btn-inspeccionar">Inspeccionar RX 115</a>
+                <a href="{{ url_for('motos.xtz_125_view') }}" class="btn-inspeccionar">Inspeccionar</a>
             </div>
             <div class="moto-card">
                 <div class="moto-images">
@@ -322,14 +392,14 @@
                     <p>Potencia: 24.5 HP</p>
                     <p>Peso: 145 kg</p>
                 </div>
-                <a href="inspeccionar/ns200.html" class="btn-inspeccionar">Inspeccionar</a>
+                <a href="{{ url_for('motos.ns_200_view') }}" class="btn-inspeccionar">Inspeccionar</a>
             </div>
+            
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2023 INFOMOTOS. Todos los derechos reservados.</p>
-        <a href="{{ url_for('auth.logout') }}" class="btn btn-danger">Cerrar sesión</a>
+        <p>&copy; 2024 INFOMOTOS. Todos los derechos reservados.</p>
     </footer>
 
     <script>

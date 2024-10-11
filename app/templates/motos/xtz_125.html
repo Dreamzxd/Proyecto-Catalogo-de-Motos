@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XTZ 125</title>
+
+</head>
+<body>
+    <style>
+                      .header {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .info-sections {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .info-section {
+            width: 45%;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .info-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .specs {
+            background-color: #f0f8ff;
+        }
+
+        .history {
+            background-color: #fff0f5;
+        }
+
+        .maintenance {
+            background-color: #f0fff0;
+        }
+
+        .performance {
+            background-color: #fff5e6;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li:before {
+            content: '🏍️';
+            position: absolute;
+            left: 0;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #333;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #FF9F55;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .right::after {
+            left: -16px;
+        }
+    </style>
+    <div class="header">
+        <h1>Info XTZ 125</h1>
+    </div>
+    <div class="content">
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEOID_XTZ125" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="info-sections">
+        <section class="info-section specs">
+            <h2>Especificaciones Técnicas</h2>
+            <ul>
+                <li>Motor: 4 tiempos, refrigerado por aire</li>
+                <li>Cilindrada: 124 cc</li>
+                <li>Potencia máxima: 10.2 CV a 7,500 rpm</li>
+                <li>Transmisión: 5 velocidades</li>
+                <li>Peso en orden de marcha: 118 kg</li>
+                <li>Capacidad del tanque: 10.2 litros</li>
+                <li>Suspensión delantera: Horquilla telescópica</li>
+                <li>Suspensión trasera: Monoamortiguador</li>
+                <li>Freno delantero: Disco hidráulico</li>
+                <li>Freno trasero: Tambor</li>
+                <li>Neumático delantero: 80/90-21</li>
+                <li>Neumático trasero: 110/80-18</li>
+            </ul>
+        </section>
+        <section class="info-section history">
+            <h2>Historia</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <p>2003: Introducción de la Yamaha XTZ 125 en el mercado</p>
+                </div>
+                <div class="timeline-item right">
+                    <p>2008: Actualización del diseño y mejoras en el motor</p>
+                </div>
+                <div class="timeline-item left">
+                    <p>2014: Incorporación de freno de disco delantero en algunos mercados</p>
+                </div>
+                <div class="timeline-item right">
+                    <p>2020: Última actualización con mejoras en eficiencia y emisiones</p>
+                </div>
+            </div>
+        </section>
+        <section class="info-section maintenance">
+            <h2>Mantenimiento</h2>
+            <ul>
+                <li>Cambio de aceite: Cada 3000 km o 6 meses</li>
+                <li>Filtro de aire: Limpieza cada 1000 km, cambio cada 12000 km</li>
+                <li>Cadena: Ajuste y lubricación cada 1000 km</li>
+                <li>Bujía: Revisión cada 6000 km, cambio cada 12000 km</li>
+                <li>Válvulas: Revisión y ajuste cada 24000 km</li>
+                <li>Filtro de combustible: Cambio cada 12000 km</li>
+                <li>Líquido de frenos: Cambio cada 2 años</li>
+                <li>Pastillas de freno: Revisión cada 6000 km</li>
+                <li>Neumáticos: Revisión de presión y desgaste mensualmente</li>
+                <li>Batería: Revisión del nivel de electrolito mensualmente</li>
+            </ul>
+        </section>
+        <section class="info-section performance">
+            <h2>Rendimiento</h2>
+            <ul>
+                <li>Velocidad máxima: ≈100 km/h</li>
+                <li>Aceleración 0-60 km/h: ≈6 segundos</li>
+                <li>Consumo: Aproximadamente 40 km/l en carretera</li>
+                <li>Autonomía: Hasta 400 km con tanque lleno</li>
+                <li>Capacidad todoterreno: Buena para caminos de tierra y grava</li>
+                <li>Maniobrabilidad: Ágil en ciudad y caminos rurales</li>
+                <li>Frenado: Eficiente para su segmento</li>
+            </ul>
+            <p>La XTZ 125 es una moto versátil diseñada para uso diario y aventuras ligeras fuera de carretera. Destaca por su economía, facilidad de manejo y capacidad para enfrentar diversos tipos de terreno, siendo ideal para conductores principiantes o aquellos que buscan una moto confiable para el día a día y escapadas de fin de semana.</p>
+        </section>
+    </div>
+</body>
+</html>

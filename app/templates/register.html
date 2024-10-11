@@ -13,7 +13,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-image: url('https://source.unsplash.com/1600x900/?motorcycle,garage');
+            background-image: url('../static/img/2.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -107,7 +107,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>🏍️ Join the Ride</h1>
+        <h1>Registrate 🏍️ </h1>
         <form method="POST" action="{{ url_for('auth.register') }}">
             <label for="username">Usuario:</label>
             <input type="text" id="username" name="username" required aria-required="true">
@@ -115,7 +115,7 @@
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="password" required aria-required="true">
             
-            <input type="submit" value="Rev Up & Register">
+            <input type="submit" value="Registrate">
         </form>
         <div class="login-link">
             <a href="{{ url_for('auth.login') }}">¿Ya tienes cuenta? Inicia aqui.</a>

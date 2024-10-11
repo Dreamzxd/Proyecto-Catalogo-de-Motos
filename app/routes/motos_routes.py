@@ -14,6 +14,22 @@ def rx_115_view():
 def dt_175_view():
     return render_template('motos/dt_175.html')
 
-bp.route('/motos/fz_250')
+@bp.route('/motos/fz_250')
 def fz_250_view():
     return render_template('motos/fz_250.html')
+
+@bp.route('/motos/xtz_150')
+def xtz_150_view():
+    return render_template('motos/xtz_150.html')
+
+@bp.route('/motos/dt_125')
+def dt_125_view():
+    return render_template('motos/dt_125.html')
+
+@bp.route('/motos/xtz_125')
+def xtz_125_view():
+    return render_template('motos/xtz_125.html')
+
+@bp.route('/motos/ns_200')
+def ns_200_view():
+    return render_template('motos/ns_200.html')

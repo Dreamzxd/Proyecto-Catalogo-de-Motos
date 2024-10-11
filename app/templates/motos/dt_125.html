@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DT 125</title>
+</head>
+<body>
+    <style>
+                        .header {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .info-sections {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .info-section {
+            width: 45%;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .info-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .specs {
+            background-color: #f0f8ff;
+        }
+
+        .history {
+            background-color: #fff0f5;
+        }
+
+        .maintenance {
+            background-color: #f0fff0;
+        }
+
+        .performance {
+            background-color: #fff5e6;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li:before {
+            content: '🏍️';
+            position: absolute;
+            left: 0;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #333;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #FF9F55;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .right::after {
+            left: -16px;
+        }
+    </style>
+    <div class="header">
+        <h1>Info DT 125</h1>
+    </div>
+    <div class="content">
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEOID_DT125" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="info-sections">
+        <section class="info-section specs">
+            <h2>Especificaciones Técnicas</h2>
+            <ul>
+                <li>Motor: 2 tiempos, refrigerado por aire</li>
+                <li>Cilindrada: 123 cc</li>
+                <li>Potencia máxima: 13 CV a 7000 rpm</li>
+                <li>Transmisión: 6 velocidades</li>
+                <li>Peso en seco: 113 kg</li>
+                <li>Capacidad del tanque: 9.5 litros</li>
+                <li>Suspensión delantera: Horquilla telescópica</li>
+                <li>Suspensión trasera: Monoamortiguador</li>
+                <li>Freno delantero: Disco</li>
+                <li>Freno trasero: Tambor</li>
+                <li>Neumático delantero: 2.75-21</li>
+                <li>Neumático trasero: 4.10-18</li>
+            </ul>
+        </section>
+        <section class="info-section history">
+            <h2>Historia</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <p>1974: Introducción de la Yamaha DT 125</p>
+                </div>
+                <div class="timeline-item right">
+                    <p>1982: Incorporación del sistema YPVS (Yamaha Power Valve System)</p>
+                </div>
+                <div class="timeline-item left">
+                    <p>1993: Rediseño importante con nuevo chasis y estética</p>
+                </div>
+                <div class="timeline-item right">
+                    <p>2004: Fin de producción en la mayoría de mercados debido a normativas de emisiones</p>
+                </div>
+            </div>
+        </section>
+        <section class="info-section maintenance">
+            <h2>Mantenimiento</h2>
+            <ul>
+                <li>Cambio de aceite: Cada 1500 km o 2 meses</li>
+                <li>Filtro de aire: Limpieza cada 1000 km, cambio cada 3000 km</li>
+                <li>Cadena: Ajuste y lubricación cada 500 km</li>
+                <li>Bujía: Revisión cada 1500 km, cambio cada 3000 km</li>
+                <li>Carburador: Limpieza cada 3000 km</li>
+                <li>Frenos: Revisión cada 1000 km</li>
+                <li>Aceite de horquilla: Cambio cada 12000 km o anual</li>
+                <li>Rodamientos: Engrase cada 6000 km</li>
+                <li>Suspensión: Ajuste cada 5000 km</li>
+                <li>Pistón y aros: Revisión cada 5000 km, cambio según desgaste</li>
+                <li>Sistema eléctrico: Revisión cada 5000 km</li>
+            </ul>
+        </section>
+        <section class="info-section performance">
+            <h2>Rendimiento</h2>
+            <ul>
+                <li>Velocidad máxima: ≈110 km/h</li>
+                <li>Aceleración 0-100 km/h: ≈15 segundos</li>
+                <li>Consumo: 3.5-4.5 L/100 km</li>
+                <li>Autonomía: 210-270 km</li>
+                <li>Capacidad todoterreno: Muy buena</li>
+                <li>Maniobrabilidad: Excelente</li>
+                <li>Frenado: Bueno para su categoría</li>
+            </ul>
+            <p>La DT 125 es reconocida por su versatilidad, siendo capaz de ofrecer un buen rendimiento tanto en carretera como en terrenos off-road. Su ligereza y potencia la hacen ideal para principiantes y riders experimentados.</p>
+        </section>
+    </div>
+</body>
+</html>
