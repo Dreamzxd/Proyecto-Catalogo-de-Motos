@@ -16,6 +16,7 @@ Este proyecto es un sistema web de gestión de un catálogo de motos desarrollad
 ## 📂 Estructura del proyecto
 
 Proyecto-Catalogo-de-Motos/
+
 │
 ├── app/
 │ ├── static/ # Archivos CSS, JS, imágenes
