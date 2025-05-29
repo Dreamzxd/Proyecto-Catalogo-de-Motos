@@ -45,3 +45,12 @@ Proyecto-Catalogo-de-Motos/
    ```bash
    git clone https://github.com/Dreamzxd/Proyecto-Catalogo-de-Motos.git
    cd Proyecto-Catalogo-de-Motos
+
+Crea un entorno virtual e instálalo:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate     # En Linux/macOS
+   venv\Scripts\activate        # En Windows
+   pip install -r requirements.txt
+
+
